@@ -1,3 +1,11 @@
 .index-page-wrapper h1 {
     color: green;
 }
+
+.inner-wrapper { 
+    position: absolute; 
+    top: 100px;
+    left: 100px;
+    background-color: pink; 
+    width: 50vw;
+}
