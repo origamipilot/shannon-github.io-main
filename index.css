@@ -4,5 +4,6 @@
 
 #plant-pic { 
     width: 40vw; 
-    border-radius: 5px; 
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
