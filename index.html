@@ -2,7 +2,7 @@
 <html>
     <head>
         <tile>ABC</tile>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="css/index.css">
         
             <style>
                 .index-page-wrapper { background-color: aqua; }
@@ -15,5 +15,174 @@
             <h1>Title</h1>
             <p>Lots and lots of text.</p>
         </div>
+<!--    HACK    -->
+
+<div class="site-wrapper">
+
+    <div class="matrix-code"> 
+        <video loop autoplay controls>
+            <source src="https://www.dropbox.com/scl/fi/86fzua2mao4edqe93nozb/Matrix-Code-Rain-45-Seconds.mp4?rlkey=q5rfxkccmb2x9ruavpcz3iz0f&raw=1" type="video/mp4">
+        </video>
+    </div>
+
+
+
+    <div class="hacker"> 
+    <img src="https://www.dropbox.com/scl/fi/280radx6cgv83daq5nczl/hacker.gif?rlkey=9b2oncmf2gl78cnojbc5k7l23&raw=1">
+    </div> 
+
+
+
+    <!--  
+    <div class="hacker-progress-bar"> 
+    <a href="https://www.dropbox.com/scl/fi/djlcloe3awp1m99nd64ow/RB19.png?rlkey=ad3kh6rttca95fwa51iiy1xi5&raw=1" data-fancybox data-caption="Single image">
+        <img src="https://www.dropbox.com/scl/fi/7r2ce32muivr4h2cpx26h/hacking.gif?rlkey=qf7bdq0xdzqsfmhjody9epzuq&raw=1" id="hacker-gif"/>
+    </a>
+    </div> 
+-->
+
+
+<!---------------------------->
+<!-- Emergency Radio Button -->
+<!---------------------------->
+
+<div class="alarm"> 
+
+<h3>ALARM</h3>    
+    <form class="form">
+        <div class="switch-field">
+            <input type="radio" id="radio-one" name="textOption" value="option1" checked onclick="changeText(this)">
+            <label for="radio-one"></label>
+            <input type="radio" id="radio-two" name="textOption" value="option2" onclick="changeText(this)">
+            <label for="radio-two"></label>
+        </div>
+    </form>
+</div>
+
+<!----------------------------------->
+<!-- Emergency Radio Button Script -->
+<!----------------------------------->
+
+<script> 
+function changeText(radio) {
+    var displayElement = document.getElementById("displayText");
+    
+    if (radio.value === "option1") {
+        displayElement.textContent = "Sound the alarm!!! Someone is hacking the SquareKicker datafiles.";
+    } else if (radio.value === "option2") {
+        displayElement.textContent = "To stop this cyberattack, complete today's standup without going overtime.";
+    }
+}
+</script>
+
+
+
+<!----------------------------------->
+<!-- Ded Duck                      -->
+<!----------------------------------->
+
+
+
+<div class="you-have-been-hacked" id="hackedMessage" data-fancybox="images" data-animation-effect="fade"> 
+<h1>Hacked</h1>
+<img id="ded-duck" src="https://static1.squarespace.com/static/63e3109fddaf2e5de572f7d7/t/6514e8319236b76cd003bed1/1695868980577/black-duck.png">
+</div>
+
+<p id="status"></p>
+
+
+
+
+<!----------------------------------->
+<!-- Timer                         -->
+<!----------------------------------->
+
+<div class="timer-wrapper" id="timerWrapper">  
+<div id="displayText">Sound the alarm!!! Someone is hacking the SquareKicker datafiles.</div>
+
+<div class="flex-container"> 
+    <p class="flex-item"><span id="timer1">20</span></p>
+</div>
+
+
+    <!-- ... (existing code) ... -->
+    <div>
+        <button id="start1">Start</button>
+        <button id="stop1">Stop</button>
+        <button id="reset1">Reset</button>
+    </div>
+</div>
+</div>    
+
+<!----------------------------------->
+<!--             Time Script       -->
+<!----------------------------------->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+var interval1;
+var timeLeft1 = 20;
+var timer1Running = false;
+
+function startTimer1() {
+if (!timer1Running) {
+    timer1Running = true;
+    interval1 = setInterval(function () {
+        if (timeLeft1 > 0) {
+            timeLeft1--;
+
+            if (timeLeft1 <= 10) {
+                $("#timer1").css("color", "red");
+            }
+
+            $("#timer1").text(timeLeft1);
+        } else {
+            clearInterval(interval1);
+            $("#status").text("1 Minute Timer Expired.");
+            showHackedMessage();
+        }
+    }, 1000);
+}
+}
+
+function stopTimer1() {
+clearInterval(interval1);
+$("#status").text(timeLeft1 + " Points");
+timer1Running = false;
+}
+
+function resetTimer1() {
+clearInterval(interval1);
+timeLeft1 = 20; // Change this to the desired initial time
+timer1Running = false;
+$("#timer1").css("color", ""); // Reset text color
+$("#timer1").text(timeLeft1);
+$("#status").text(""); // Reset status message
+hideHackedMessage();
+}
+
+
+function showHackedMessage() {
+    $("#timerWrapper").hide();
+    $(".you-have-been-hacked").show();
+}
+
+function hideHackedMessage() {
+    $("#timerWrapper").show();
+    $(".you-have-been-hacked").hide();
+}
+
+$(document).ready(function () {
+hideHackedMessage();
+$("#start1").click(startTimer1);
+$("#stop1").click(stopTimer1);
+$("#reset1").click(resetTimer1);
+});
+
+</script>
+
+
     </body>
 </html>
