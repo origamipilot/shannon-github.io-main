@@ -3,9 +3,7 @@
 }
 
 .inner-wrapper { 
-    position: absolute; 
-    top: 100px;
-    left: 100px;
     background-color: pink; 
+    height: 500vh;
     width: 50vw;
 }
