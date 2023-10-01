@@ -1,9 +1,29 @@
+.index-page-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+     height: 100vh; width: 100vw; width: 100vw; 
+    background-color: aqua;
+}
+
 .index-page-wrapper h1 {
     color: orangered;
 }
+
+.inner-wrapper {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: pink;
+    height: 100vh; width: 50vw; }
+       
 
 #plant-pic { 
     width: 40vw; 
     border-radius: 5px;
     margin-bottom: 20px;
 }
+
+
+
+               
