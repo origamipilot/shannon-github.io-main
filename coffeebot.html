@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Bot</title>
+    <link rel="stylesheet" href="coffeebot.css"> 
+</head>
+<body>
+    <div class="page-wrapper">
+        
+        <div id="coffeeshop-neon"> 
+            
+            <div id="white" class="white">
+            </div>
+
+            <div id="neon" class="neon">
+           
+            </div>
+        
+             <div id="coffeeshop" class="coffeeshop"> 
+                 <img id="image" src="https://www.dropbox.com/scl/fi/tp0bp7arefikucpdn7rjj/sk_coffee_shop_.png?rlkey=rp0x3jwzxlp3b5bml55i48kfh&raw=1"> 
+            </div> 
+        </div>
+
+        <div id="button-wrapper" class="button-wrapper">
+            <a href="https://script.google.com/macros/s/AKfycbx6-EPrQUpMZfs3uzKM95wHvYjEAHd8O9Mr_ms4Huvh2RsYCrlKdsgDih63SemyxXEg/exec">
+            <button class="button">ENTER</button>
+            </a>
+            <button class="button" onclick="toggleVisibility()">NEON</button>
+        </div>
+            
+    </div>
+
+    
+        <script>
+            function toggleVisibility() {
+                var element = document.getElementById("neon");
+
+                if (element.style.display === "none" || element.style.display === "") {
+                    // Element is currently hidden, show it
+                    element.style.display = "block";
+                } else {
+                    // Element is currently visible, hide it
+                    element.style.display = "none";
+                }
+            }
+        </script>
+   
+</body>
+</html>
