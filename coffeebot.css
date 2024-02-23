@@ -124,5 +124,11 @@ height: 80px;
 border: black 1px solid ;
 border-radius: 5px;
 background-color: #262626;
-color: #ffffff;
+color :  #ffffff;
+transition: background-color 0.3s, color 0.3s; /* Add a smooth transition effect */
+}
+
+.button:hover {
+  background-color: #444; /* Change the background color on hover */
+  color: #fff; /* Change the text color on hover */
 }
